@@ -17,7 +17,7 @@ st.write('You selected:', option)
 
 money = money[:] [money['A_YEAR']== option2]
 
-fig, ax = plt.subplots(2,2, figsize=(12,8))
+fig, ax = plt.subplots(2,2, figsize=(15,10))
 
 plt.subplot(221)
 plt.plot(  list( money['A_MONTH'] ), list( money['A_RATE'] ), color='red' , marker='o'     ) 
