@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 st.title(':heartbeat: :blue[Economic data 2020~2022] :heartbeat:')
-st.title('A title with _italics_ :blue[colors] and emojis :full_moon_with_face:')
 
 money = pd.read_csv("money_data7.csv")
 
