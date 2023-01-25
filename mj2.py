@@ -5,7 +5,7 @@ st.title(':heartbeat: :blue[Economic data 2020~2022] :heartbeat:')
 
 money = pd.read_csv("money_data7.csv")
 
-
+st.sidebar.success("Select a demo above.")
 import streamlit as st
 
 option = st.selectbox(
