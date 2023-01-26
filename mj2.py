@@ -8,13 +8,9 @@ st.title(':heartbeat: :blue[Economic data 2020~2022] :heartbeat:')
 def plotting_demo() :
     money = pd.read_csv("money_data7.csv")
     option = st.selectbox( 'How would you like to choice year ?', ('2020', '2021', '2022') )
-
     option2 = int(option)
-
     st.write('You selected:', option)
-
     money = money[:] [money['A_YEAR']== option2]
-
     fig, ax = plt.subplots(2,2, figsize=(15,10))
 
     plt.subplot(221)
@@ -42,6 +38,6 @@ def plotting_demo() :
 
 with st.form(key ='Form1'):
     with st.sidebar:
-        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie'))
+        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie' , 'histogram' , 'corr' , 'wordcloud' , 'box' ))
 if select_language =='line':
     plotting_demo()
