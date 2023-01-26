@@ -15,7 +15,7 @@ def plotting_basic() :
 
 def plotting_line() :
     plt.subplot(221)
-    plt.plot( money.A_MONTH , money.A_RATE , color='red' , marker='o' ) 
+    plt.plot( x=money.A_MONTH , y=money.A_RATE , color='red' , marker='o' ) 
     plt.xticks( money.A_MONTH )
     plt.title('US Interest')
 
