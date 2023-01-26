@@ -20,7 +20,7 @@ def plotting_line() :
     plt.title('US Interest')
 
     plt.subplot(222)
-    plt.plot( money.A_MONTH , money.K_RATE' , color='blue' , marker='o' ) 
+    plt.plot( money.A_MONTH , money.K_RATE , color='blue' , marker='o' ) 
     plt.xticks( money.A_MONTH )
     plt.title('KR Interest')
 
