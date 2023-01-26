@@ -20,19 +20,19 @@ def plotting_line() :
     plt.title('America rate')
 
     plt.subplot(222)
-    plt.plot( money.A_MONTH , money.K_RATE , color='blue' , marker='o' ) 
-    plt.xticks( money.A_MONTH )
-    plt.title('KR Interest')
+    plt.plot(  list( money['A_MONTH'] ), list( money['K_RATE'] ), color='blue' , marker='o'     ) 
+    plt.xticks(tuple(money['A_MONTH']) )
+    plt.title('Korea rate')
 
     plt.subplot(223)
-    plt.plot( money.A_MONTH, money.KOSPI, color='green' , marker='o' )
-    plt.xticks( money.A_MONTH )
-    plt.title('KOSPI')
+    plt.plot(  list( money['A_MONTH'] ), list( money['KOSPI'] ), color='green' , marker='o'     ) 
+    plt.xticks(tuple(money['A_MONTH']) )
+    plt.title('Kospi Rate')
 
     plt.subplot(224)
-    plt.plot( money.A_MONTH, money.HOUSE_PRICE, color='yellow' , marker='o' )
-    plt.xticks( money.A_MONTH )
-    plt.title('Housing Price')
+    plt.plot(  list( money['A_MONTH'] ), list( money['HOUSE_PRICE'] ), color='yellow' , marker='o'     ) 
+    plt.xticks(tuple(money['A_MONTH']) )
+    plt.title('House Price')
 
     st.pyplot(fig)
     st.dataframe(money)
