@@ -7,11 +7,9 @@ st.title(':heartbeat: :blue[Economic data 2020~2022] :heartbeat:')
 
 #st.sidebar.success("Select a demo above.")
 
-def  plotting_demo():
+def plotting_demo() :
     money = pd.read_csv("money_data7.csv")
-    option = st.selectbox(
-        'How would you like to choice year ?',
-        ('2020', '2021', '2022'))
+    option = st.selectbox( 'How would you like to choice year ?', ('2020', '2021', '2022'))
 
 option2 = int(option)
 
