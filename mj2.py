@@ -46,5 +46,4 @@ if select_language =='line':
     try:
           plotting_line()
     except:      
-          print('Upload File')
           pass
