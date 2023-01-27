@@ -6,7 +6,9 @@ import numpy as np
 st.title(':heartbeat: :blue[Economic data 2020~2022] :heartbeat:')
 
 def plotting_line() :
-    money = pd.read_csv("money_data7.csv")
+    uploaded_file = st.file_uploader("Choose a file")
+    money=pd.read_csv(uploaded_file)
+    #money = pd.read_csv("money_data7.csv")
     option = st.selectbox( 'How would you like to choice year ?', ('2020', '2021', '2022') )
     option2 = int(option)
     st.write('You selected:', option)
@@ -40,4 +42,7 @@ with st.form(key ='Form1'):
     with st.sidebar:
         select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie' , 'histogram' , 'corr' , 'wordcloud' , 'box' ))
 if select_language =='line':
-    plotting_line()
+    try:
+          plotting_demo()  
+    except:      
+          pass
