@@ -38,12 +38,12 @@ def plotting_line() :
 
     st.pyplot(fig)
     st.dataframe(money)
-
-with st.form(key ='Form1'):
-    with st.sidebar:
-        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie' , 'histogram' , 'corr' , 'wordcloud' , 'box' ))
-if select_language =='line':
     try:
           plotting_demo()
     except:
           pass
+
+with st.form(key ='Form1'):
+    with st.sidebar:
+        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie' , 'histogram' , 'corr' , 'wordcloud' , 'box' ))
+
