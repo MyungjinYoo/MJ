@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 st.title(':heartbeat: :blue[Economic data 2020~2022] :heartbeat:')
-
+uploaded_file = st.file_uploader("Choose a file")
+money=pd.read_csv(uploaded_file)
 
 def plotting_line() :
-    uploaded_file = st.file_uploader("Choose a file")
-    money=pd.read_csv(uploaded_file)
+
     #money = pd.read_csv("money_data7.csv")
     option = st.selectbox( 'How would you like to choice year ?', ('2020', '2021', '2022') )
     option2 = int(option)
@@ -38,15 +38,14 @@ def plotting_line() :
 
     st.pyplot(fig)
     st.dataframe(money)
-    try:
-          plotting_demo()
-    except:
-          pass
+
 
 with st.form(key ='Form1'):
     with st.sidebar:
         select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie' , 'histogram' , 'corr' , 'wordcloud' , 'box' ))
 
 if selected_language == 'line' :
-    plotting_line()
-
+    try:
+          plotting_line()
+    except:
+          pass
