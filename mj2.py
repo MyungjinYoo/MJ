@@ -52,7 +52,7 @@ def plotting_bar() :
         ('2015', '2016','2017', '2018', '2019', '2020', '2021', '2022'))
     option2 = option
     st.write('You selected:', option)
-    baseball['정규순위'] = baseball['승률'].rank (ascending = False)
+    baseball['정규순위'] = baseball.groupby('년도')['승률'].rank (ascending = False)
     df7  =  baseball[:] [ baseball.년도==option2 ].sort_values(by = '승률' , ascending = False)
     x = df7.팀
     y = df7.승률
