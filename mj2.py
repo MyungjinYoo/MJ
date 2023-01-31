@@ -60,7 +60,7 @@ def plotting_bar() :
     colors = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7' ,'C8', 'C9', 'C10' ]
     plt.bar( x, y, color= colors )
     for num , v in enumerate( y ):
-        plt.text ( num -0.4 , v + 0.01 , v , fontsize = 14)
+        plt.text ( num -0.3 , v + 0.01 , v , fontsize = 14)
     plt.title( "KBO winrate data", position=(0.5,1.1) , fontsize = 22)
     plt.xticks(size = 14)
     plt.yticks(size = 14)
