@@ -37,7 +37,7 @@ def  plotting_line():
     st.pyplot(fig)
     st.dataframe(money)
 
-def plotting_bar :
+def plotting_bar() :
     url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
     years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022' ]
     df = pd.DataFrame([])
