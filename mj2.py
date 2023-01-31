@@ -46,7 +46,7 @@ def plotting_bar() :
         df1['년도'] = i
         df = pd.concat([df, df1], axis=0)
     df.팀.replace({'두산':'Doosan','삼성':'Samsung','키움':'Kium','한화': 'Hanhwa','롯데':'Lotte','넥센':'Nexen'}, inplace=True)
-        option = st.selectbox(
+    option = st.selectbox(
         'How would you like to choice year ?',
         ('2015', '2016','2017', '2018', '2019', '2020', '2021', '2022'))
     option2 = option
