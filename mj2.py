@@ -74,7 +74,7 @@ if select_language =='line':
     except:      
           pass
         
-if select_language = 'bar' :
+if select_language == 'bar' :
     try :
         plotting_bar()
     except :
