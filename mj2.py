@@ -52,12 +52,11 @@ def plotting_bar() :
         ('2015', '2016','2017', '2018', '2019', '2020', '2021', '2022'))
     option2 = option
     st.write('You selected:', option)
-    baseball.drop('순위',axis = 1 , inplace = True)
-    baseball['순위'] = baseball['승률'].rank (ascending = False)
+    baseball['정규순위'] = baseball['승률'].rank (ascending = False)
     df7  =  baseball[:] [ baseball.년도==option2 ].sort_values(by = '승률' , ascending = False)
     x = df7.팀
     y = df7.승률
-    fig, ax = plt.subplots(figsize=(15,10))
+    fig, ax = plt.subplots(figsize=(22,14))
     colors = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7' ,'C8', 'C9', 'C10' ]
     plt.bar( x, y, color= colors )
     for num , v in enumerate( y ):
