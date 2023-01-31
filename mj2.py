@@ -60,7 +60,7 @@ def plotting_bar() :
     plt.bar( x, y, color= colors )
     for num , v in enumerate( y ):
         plt.text ( num -0.4 , v + 0.01 , v , fontsize = 14)
-    plt.title( "KBO winrate data", position=(0.5,1.1))
+    plt.title( "KBO winrate data", position=(0.5,1.1) , fontsize = 22)
     st.pyplot(fig)
     st.dataframe(df7)
 
