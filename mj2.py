@@ -37,6 +37,32 @@ def  plotting_line():
     st.pyplot(fig)
     st.dataframe(money)
 
+def plotting_bar :
+    url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
+    years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022' ]
+    df = pd.DataFrame([])
+    for i in years:
+        df1 = pd.read_html(url+i)[0]
+        df1['년도'] = i
+        df = pd.concat([df, df1], axis=0)
+    df.팀.replace({'두산':'Doosan','삼성':'Samsung','키움':'Kium','한화': 'Hanhwa','롯데':'Lotte','넥센':'Nexen'}, inplace=True)
+        option = st.selectbox(
+        'How would you like to choice year ?',
+        ('2015', '2016','2017', '2018', '2019', '2020', '2021', '2022'))
+    option2 = option
+    st.write('You selected:', option)
+    df7  =  baseball[:] [ baseball.년도==option2 ]
+    x = df7.팀
+    y = df7.승률
+    fig, ax = plt.subplots(figsize=(15,10))
+    colors = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7' ,'C8', 'C9', 'C10' ]
+    plt.bar( x, y, color= colors )
+    for num , v in enumerate( y ):
+        plt.text ( num -0.4 , v + 0.01 , v )
+    plt.title( "KBO winrate data", position=(0.5,1.1))
+    st.pyplot(fig)
+    st.dataframe(df7)
+
 
 with st.form(key ='Form1'):
     with st.sidebar:
@@ -47,3 +73,9 @@ if select_language =='line':
           plotting_line()
     except:      
           pass
+        
+if select_language = 'bar' :
+    try :
+        plotting_bar()
+    except :
+        pass
