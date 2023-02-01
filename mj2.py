@@ -74,9 +74,7 @@ def KBO_standings() :
     plt.xticks(size = 14)
     plt.yticks(size = 14)
     st.pyplot(fig)
-    st.dataframe(df7)
-
-st.set_page_config(layout="centered")
+    st.dataframe(df7 , width = 100 , height = 80)
 
 
 with st.form(key ='Form1'):
