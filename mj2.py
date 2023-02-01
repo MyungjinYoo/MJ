@@ -76,6 +76,7 @@ def KBO_standings() :
     st.pyplot(fig)
     st.dataframe(df7)
 
+st.set_page_config(layout="stretched")
 
 
 with st.form(key ='Form1'):
