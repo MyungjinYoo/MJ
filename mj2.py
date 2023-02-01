@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.title(':heartbeat:blue[Economic data 2020~2022]	:heartbeat:')
+st.title(':heartbeat: blue[Economic data 2020~2022]	:heartbeat:')
 
 def  Monthly_economic_data():
     
