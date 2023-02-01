@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def  plotting_line():
+def  Monthly_economic_data():
     
     uploaded_file = st.file_uploader("Choose a file")
     money=pd.read_csv(uploaded_file)
@@ -37,7 +37,7 @@ def  plotting_line():
     st.pyplot(fig)
     st.dataframe(money)
 
-def plotting_bar() :
+def KBO standings() :
     url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
     years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022' ]
     df = pd.DataFrame([])
@@ -70,18 +70,19 @@ def plotting_bar() :
     st.pyplot(fig)
     st.dataframe(df7)
 
+st.set_page_config(layout="centered")     
 
 with st.form(key ='Form1'):
     with st.sidebar:
-        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie' , 'histogram' , 'corr' , 'wordcloud' , 'box' ))
+        select_graph = st.sidebar.radio('What do you want ?', ('Monthly economic data','KBO standings'))
 
-if select_language =='line':           
+if select_graph =='Monthly economic data':
     try:
           plotting_line()
     except:      
           pass
         
-if select_language == 'bar' :
+elif select_graph == 'KBO standings' :
     try :
         plotting_bar()
     except :
