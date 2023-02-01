@@ -10,7 +10,7 @@ def  Monthly_economic_data():
     option = st.selectbox( 'How would you like to choice year ?', ('2020', '2021', '2022') )
     option2 = int(option)
     st.write('You selected:', option)
-    money = money[['Year','Month','$currency','US_interest','KOSPI','KOR_interest','brent_oil_price', 'House_price_index']]
+    money = money[['Year','Month','Dollar_currency','US_interest','KOSPI','Salary_Index','KOR_interest','brent_oil_price', 'House_price_index']]
     money = money[:] [money['Year']== option2]
     fig, ax = plt.subplots(2,2, figsize=(15,10))
     
