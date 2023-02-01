@@ -45,7 +45,7 @@ def plotting_bar() :
         df1 = pd.read_html(url+i)[0]
         df1['년도'] = i
         df = pd.concat([df, df1], axis=0)
-    df.팀.replace({'두산':'Doosan','삼성':'Samsung','키움':'Kium','한화': 'Hanhwa','롯데':'Lotte','넥센':'Nexen'}, inplace=True)
+    df.팀.replace({'두산':'Doosan','삼성':'Samsung','키움':'Kiwoom','한화': 'Hanhwa','롯데':'Lotte','넥센':'Nexen'}, inplace=True)
     baseball = df
     option = st.selectbox(
         'How would you like to choice year ?',
