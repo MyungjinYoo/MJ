@@ -37,7 +37,7 @@ def  Monthly_economic_data():
     st.pyplot(fig)
     st.dataframe(money)
 
-def KBO standings() :
+def KBO_standings() :
     url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
     years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022' ]
     df = pd.DataFrame([])
@@ -78,12 +78,12 @@ with st.form(key ='Form1'):
 
 if select_graph =='Monthly economic data':
     try:
-          plotting_line()
+          Monthly_economic_data()
     except:      
           pass
         
 elif select_graph == 'KBO standings' :
     try :
-        plotting_bar()
+        KBO_standings()
     except :
         pass
