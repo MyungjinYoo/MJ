@@ -8,6 +8,7 @@ def  Monthly_economic_data():
     uploaded_file = st.file_uploader("Choose a file")
     money=pd.read_csv(uploaded_file)
     option = st.selectbox( 'How would you like to choice year ?', ('2020', '2021', '2022') )
+    print('호진바보')
     option2 = int(option)
     st.write('You selected:', option)
     money.rename(columns = {'A_YEAR' : 'Year' , 'A_MONTH' : 'Month' ,'A_DOLLAR':'Dollar_currency', 'A_RATE' : 'US_interest', 'KOSPI': 'KOSPI', 'SALARY_INCREASE' : 'Salary_Index', 'K_RATE': 'KOR_interest' ,'OIL_PRICE': 'brent_oil_price' ,'HOUSE_PRICE': 'House_price_index'} , inplace = True )
