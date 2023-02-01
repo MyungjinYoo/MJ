@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.set_page_config(size = 40,20)
+st.set_page_config(size = (40,20))
 
 def  Monthly_economic_data():
     
