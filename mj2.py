@@ -14,7 +14,7 @@ def  Monthly_economic_data():
     st.write('You selected:', option)
     money.rename(columns = {'A_YEAR' : 'Year' , 'A_MONTH' : 'Month' ,'A_DOLLAR':'Dollar_currency', 'A_RATE' : 'US_interest', 'KOSPI': 'KOSPI', 'SALARY_INCREASE' : 'Salary_Index', 'K_RATE': 'KOR_interest' ,'OIL_PRICE': 'brent_oil_price' ,'HOUSE_PRICE': 'House_price_index'} , inplace = True )
     money = money[:] [money['Year']== option2]
-    fig, ax = plt.subplots(2,2, figsize=(20,10))
+    fig, ax = plt.subplots(2,2)
     
     plt.subplot(221)
     plt.plot(  money.Month , money.US_interest , color='red' , marker='o'     ) 
