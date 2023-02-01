@@ -25,16 +25,19 @@ def  Monthly_economic_data():
     plt.subplot(222)
     plt.plot(  money.Month , money.KOR_interest , color='blue' , marker='o'     ) 
     plt.xticks( money.Month )
+    plt.ylabel ('KOR interest')
     plt.title('KOR Interest')
 
     plt.subplot(223)
     plt.plot(  money.Month , money.KOSPI , color='green' , marker='o'     ) 
     plt.xticks( money.Month )
+    plt.ylabel ('KOSPI index')
     plt.title('Kospi Index')
 
     plt.subplot(224)
     plt.plot(  money.Month , money.House_price_index , color='yellow' , marker='o'     ) 
     plt.xticks( money.Month )
+    plt.ylabel ('House price index')
     plt.title('House Price')
 
     st.pyplot(fig)
