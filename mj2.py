@@ -41,7 +41,7 @@ def  Monthly_economic_data():
     plt.title('House Price')
 
     st.pyplot(fig)
-    st.dataframe(money,1024,500)
+    st.table(money)
 
 def KBO_standings() :
     url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
@@ -74,7 +74,7 @@ def KBO_standings() :
     plt.xticks(size = 14)
     plt.yticks(size = 14)
     st.pyplot(fig)
-    st.dataframe(df7 , 200, 100 , use_container_width = True)
+    st.dataframe(df7)
 
 
 with st.form(key ='Form1'):
