@@ -41,7 +41,7 @@ def  Monthly_economic_data():
     plt.title('House Price')
 
     st.pyplot(fig)
-    st.dataframe(money,200,100)
+    st.dataframe(money,2000,1000)
 
 def KBO_standings() :
     url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
