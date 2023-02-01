@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+#st.set_page_config(size = 40,20)
 
 def  Monthly_economic_data():
     
@@ -11,27 +12,28 @@ def  Monthly_economic_data():
     option = st.selectbox( 'How would you like to choice year ?', ('2020', '2021', '2022') )
     option2 = int(option)
     st.write('You selected:', option)
-    money = money[:] [money['A_YEAR']== option2]
+    money = money[['Year','Month','$currency','US_interest','KOSPI','KOR_interest','brent_oil_price', 'House_price_index']]
+    money = money[:] [money['Year']== option2]
     fig, ax = plt.subplots(2,2, figsize=(15,10))
     
     plt.subplot(221)
-    plt.plot(  money.A_MONTH , money.A_RATE , color='red' , marker='o'     ) 
-    plt.xticks( money.A_MONTH )
-    plt.title('America rate')
+    plt.plot(  money.Month , money.US_interest , color='red' , marker='o'     ) 
+    plt.xticks( money.Month )
+    plt.title('US Interest')
 
     plt.subplot(222)
-    plt.plot(  money.A_MONTH , money.K_RATE , color='blue' , marker='o'     ) 
-    plt.xticks( money.A_MONTH )
-    plt.title('Korea rate')
+    plt.plot(  money.Month , money.KOR_interest , color='blue' , marker='o'     ) 
+    plt.xticks( money.Month )
+    plt.title('KOR Interest')
 
     plt.subplot(223)
-    plt.plot(  money.A_MONTH , money.KOSPI , color='green' , marker='o'     ) 
-    plt.xticks( money.A_MONTH )
-    plt.title('Kospi Rate')
+    plt.plot(  money.Month , money.KOSPI , color='green' , marker='o'     ) 
+    plt.xticks( money.Month )
+    plt.title('Kospi Index')
 
     plt.subplot(224)
-    plt.plot(  money.A_MONTH , money.HOUSE_PRICE , color='yellow' , marker='o'     ) 
-    plt.xticks( money.A_MONTH )
+    plt.plot(  money.Month , money.House_price_index , color='yellow' , marker='o'     ) 
+    plt.xticks( money.Month )
     plt.title('House Price')
 
     st.pyplot(fig)
@@ -70,7 +72,7 @@ def KBO_standings() :
     st.pyplot(fig)
     st.dataframe(df7)
 
-st.set_page_config(layout="centered")     
+
 
 with st.form(key ='Form1'):
     with st.sidebar:
