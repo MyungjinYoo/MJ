@@ -3,10 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.title(':heartbeat: :blue[Economic data 2020~2022] :heartbeat:')
+
 
 def  Monthly_economic_data():
-    
+    st.title(':heartbeat: :blue[Economic data 2020~2022] :heartbeat:')
     uploaded_file = st.file_uploader("Choose a file")
     money=pd.read_csv(uploaded_file)
     option = st.selectbox( 'How would you like to choice year ?', ('2020', '2021', '2022') )
@@ -44,6 +44,7 @@ def  Monthly_economic_data():
     st.table(money)
 
 def KBO_standings() :
+    st.title(':heartbeat: :blue[KBO standing 2015-2022] :heartbeat:')
     url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
     years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022' ]
     df = pd.DataFrame([])
