@@ -55,6 +55,7 @@ def plotting_bar() :
     baseball['정규순위'] = baseball.groupby('년도')['승률'].rank(ascending = False).astype(int)
     df7  =  baseball[:] [ baseball.년도==option2 ].sort_values(by = '승률' , ascending = False).reset_index()
     df7 = df7[['순위','팀','경기수','승','패','무','승률','게임차','연속','출루율','장타율','최근 10경기','년도','정규순위']]
+    df7.set_index('순위')
     x = df7.팀
     y = df7.승률
     fig, ax = plt.subplots(figsize=(15,10))
