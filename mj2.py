@@ -19,6 +19,7 @@ def  Monthly_economic_data():
     plt.subplot(221)
     plt.plot(  money.Month , money.US_interest , color='red' , marker='o'     ) 
     plt.xticks( money.Month )
+    plt.ylabel ('US interest')
     plt.title('US Interest')
 
     plt.subplot(222)
