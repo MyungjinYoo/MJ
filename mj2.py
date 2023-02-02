@@ -16,7 +16,7 @@ def Monthly_economic_graph():
     money = money[:] [money['Year']== option2]
     global df_money
     df_money = money
-    fig, ax = plt.subplots(2,2, figsize=(5,3))
+    fig, ax = plt.subplots(2,2, figsize=(10,6))
     
     plt.subplot(221)
     plt.plot(  money.Month , money.US_interest , color='red' , marker='o'     ) 
