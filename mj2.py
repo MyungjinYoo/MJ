@@ -64,7 +64,7 @@ def KBO_standings_graph() :
     df7  =  baseball[:] [ baseball.년도==option2 ].sort_values(by = '승률' , ascending = False).reset_index()
     df7 = df7[['순위','정규순위','팀','경기수','승','패','무','승률','게임차','연속','출루율','장타율','최근 10경기','년도']]
     df7.rename(columns = {'순위' : 'PO순위'} , inplace = True )
-    df7['게임차'] = round(df7.게임차,1)
+    df7['게임차'] = df7
     global df_baseball
     df_baseball = df7
     x = df7.팀
@@ -104,7 +104,6 @@ elif select_graph == 'KBO standings' :
         with tab1:
             tab1.subheader("A tab with a chart")
             KBO_standings_graph()
-        
         with tab2:
             tab2.subheader("A tab with the data")
             st.dataframe(df_baseball)
