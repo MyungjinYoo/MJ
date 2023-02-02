@@ -89,12 +89,12 @@ if select_graph =='Monthly economic graph':
     try:
         tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
         with tab1:
-        tab1.subheader("A tab with a chart")
-        Monthly_economic_graph()
+            tab1.subheader("A tab with a chart")
+            Monthly_economic_graph()
         
-    with tab2:
-        tab2.subheader("A tab with the data")
-        st.dataframe(df_money)
+        with tab2:
+            tab2.subheader("A tab with the data")
+            st.dataframe(df_money)
     except:      
           pass
         
@@ -102,8 +102,8 @@ elif select_graph == 'KBO standings' :
     try:
         tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
         with tab1:
-        tab1.subheader("A tab with a chart")
-        KBO_standings_graph()
+            tab1.subheader("A tab with a chart")
+            KBO_standings_graph()
         
     with tab2:
         tab2.subheader("A tab with the data")
