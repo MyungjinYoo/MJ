@@ -105,8 +105,8 @@ elif select_graph == 'KBO standings' :
             tab1.subheader("A tab with a chart")
             KBO_standings_graph()
         
-    with tab2:
-        tab2.subheader("A tab with the data")
-        st.dataframe(df_baseball)
+        with tab2:
+            tab2.subheader("A tab with the data")
+            st.dataframe(df_baseball)
     except:      
           pass
