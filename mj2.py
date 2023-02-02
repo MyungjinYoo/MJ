@@ -83,7 +83,7 @@ def KBO_standings_graph() :
 
 with st.form(key ='Form1'):
     with st.sidebar:
-        select_graph = st.sidebar.radio('Which graph are you looking for?', ('Monthly economic data','KBO standings'))
+        select_graph = st.sidebar.radio('Which graph are you looking for?', ('Monthly economic graph','KBO standings'))
 
 if select_graph =='Monthly economic graph':
     try:
